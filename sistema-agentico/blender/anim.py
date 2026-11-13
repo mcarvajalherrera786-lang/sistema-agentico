@@ -65,5 +65,5 @@ cam.rotation_euler = d.to_track_quat('-Z','Y').to_euler()
 s.camera = cam
 
 s.frame_set(1)
-bpy.ops.wm.save_as_mainfile(filepath=r"D:\Users\Asus\Desktop\BLENDER\simpsons_house.blend")
+bpy.ops.wm.save_as_mainfile(filepath=r"D:\Users\Asus\Desktop\simpsons_house.blend")
 print("ANIM OK root", tuple(round(v,2) for v in root.location), "coche", len(car_objs))

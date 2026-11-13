@@ -4,5 +4,5 @@ for o in list(bpy.data.objects):
         print("BORRANDO", o.name)
         bpy.data.objects.remove(o, do_unlink=True)
 bpy.context.scene.frame_set(40)
-bpy.ops.wm.save_as_mainfile(filepath=r"D:\Users\Asus\Desktop\BLENDER\simpsons_house.blend")
+bpy.ops.wm.save_as_mainfile(filepath=r"D:\Users\Asus\Desktop\simpsons_house.blend")
 print("OK porch quitado")

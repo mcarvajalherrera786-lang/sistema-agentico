@@ -24,9 +24,9 @@ def render(camobj, path, freestyle=True):
     bpy.ops.render.render(write_still=True)
     print("RENDER", path)
 
-render(bpy.data.objects["Cam"], r"D:\Users\Asus\Desktop\BLENDER\simpsons_house_exterior.png", True)
-render(cam, r"D:\Users\Asus\Desktop\BLENDER\simpsons_house_treehouse.png", True)
-render(bpy.data.objects["Cam_Salon"], r"D:\Users\Asus\Desktop\BLENDER\simpsons_house_salon.png", False)
+render(bpy.data.objects["Cam"], r"D:\Users\Asus\Desktop\simpsons_house_exterior.png", True)
+render(cam, r"D:\Users\Asus\Desktop\simpsons_house_treehouse.png", True)
+render(bpy.data.objects["Cam_Salon"], r"D:\Users\Asus\Desktop\simpsons_house_salon.png", False)
 
-bpy.ops.wm.save_as_mainfile(filepath=r"D:\Users\Asus\Desktop\BLENDER\simpsons_house.blend")
+bpy.ops.wm.save_as_mainfile(filepath=r"D:\Users\Asus\Desktop\simpsons_house.blend")
 print("SAVED", len(bpy.data.objects))

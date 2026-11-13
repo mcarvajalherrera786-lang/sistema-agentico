@@ -8,7 +8,7 @@ for o in shell:
     bpy.data.objects.remove(o, do_unlink=True)
 print("ELIMINADOS_SHELL", len(shell), sorted(o.name for o in shell))
 
-src = r"D:\Users\Asus\Desktop\BLENDER\src_model/source/casa nouuu.blend"
+src = r"D:\Users\Asus\Desktop\src_model/source/casa nouuu.blend"
 bpy.ops.wm.open_mainfile(filepath=src)
 MAP = {
     "Material": "Pared", "Material.001": "Pared", "Material.002": "Tejado", "Material.003": "Pared",
@@ -27,7 +27,7 @@ for o in [o for o in list(bpy.data.objects) if o.type == 'MESH']:
     srcm = o.data.materials[0].name if o.data.materials else None
     no.data.materials.append(bpy.data.materials.get(MAP.get(srcm, "Pared")))
     added.append(no.name)
-bpy.ops.wm.open_mainfile(filepath=r"D:\Users\Asus\Desktop\BLENDER\simpsons_house.blend")
+bpy.ops.wm.open_mainfile(filepath=r"D:\Users\Asus\Desktop\simpsons_house.blend")
 print("AGREGADOS_SRC", len(added), sorted(added))
 
 def srgb(h):
@@ -51,5 +51,5 @@ setcol('Hoja1', '#3E9B4F'); setcol('Hoja2', '#55B463'); setcol('Tronco', '#8B5A2
 setcol('Verde', '#2F7D3A'); setcol('Valla', '#F2F1EA')
 
 bpy.context.scene.frame_set(40)
-bpy.ops.wm.save_as_mainfile(filepath=r"D:\Users\Asus\Desktop\BLENDER\simpsons_house.blend")
+bpy.ops.wm.save_as_mainfile(filepath=r"D:\Users\Asus\Desktop\simpsons_house.blend")
 print("SWAP_OK")

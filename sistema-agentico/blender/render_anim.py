@@ -2,7 +2,7 @@ import bpy, os, time
 START, END = 97, 192
 
 s = bpy.context.scene
-outdir = r"D:\Users\Asus\Desktop\BLENDER\anim"
+outdir = r"D:\Users\Asus\Desktop\anim"
 os.makedirs(outdir, exist_ok=True)
 
 s.camera = bpy.data.objects["Cam_Garage"]
@@ -18,7 +18,7 @@ s.frame_end = END
 s.render.use_overwrite = True
 s.render.use_placeholder = False
 
-bpy.ops.wm.save_as_mainfile(filepath=r"D:\Users\Asus\Desktop\BLENDER\simpsons_house.blend")
+bpy.ops.wm.save_as_mainfile(filepath=r"D:\Users\Asus\Desktop\simpsons_house.blend")
 
 t = time.time()
 for f in range(START, END + 1):

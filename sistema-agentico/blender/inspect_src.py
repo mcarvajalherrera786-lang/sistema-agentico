@@ -1,5 +1,5 @@
 import bpy, os
-src = r"D:\Users\Asus\Desktop\BLENDER\src_model\source\casa nouuu.blend"
+src = r"D:\Users\Asus\Desktop\src_model\source\casa nouuu.blend"
 bpy.ops.wm.open_mainfile(filepath=src)
 print("SRC OPENED", bpy.data.filepath)
 print("OBJETOS", len(bpy.data.objects))
@@ -14,5 +14,5 @@ print("MATERIAS", sorted({m.name for m in bpy.data.materials if m}))
 print("CAMS", [o.name for o in bpy.data.objects if o.type == 'CAMERA'])
 print("LIGHTS", [(o.name, o.data.type) for o in bpy.data.objects if o.type == 'LIGHT'])
 print("SCENE", bpy.context.scene.render.engine, bpy.context.scene.render.resolution_x, bpy.context.scene.render.resolution_y)
-bpy.ops.wm.open_mainfile(filepath=r"D:\Users\Asus\Desktop\BLENDER\simpsons_house.blend")
+bpy.ops.wm.open_mainfile(filepath=r"D:\Users\Asus\Desktop\simpsons_house.blend")
 print("BACK TO HOUSE", len(bpy.data.objects))
